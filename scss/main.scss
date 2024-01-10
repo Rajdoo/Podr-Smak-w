@@ -19,3 +19,163 @@ html{
 body{
     font-size: 1.6rem;
 }
+
+// NAV
+
+.nav{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    font-family: 'Chivo', sans-serif;
+
+    &-mobile{
+        .burger-btn{
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            padding: 1em;
+            background: none;
+            border: 1px solid transparent;
+            cursor: pointer;
+            z-index: 1000;
+
+            &__box{
+                position: relative;
+                width: 40px;
+                height: 30px;
+            }
+
+            &__bars,
+            &__bars::after,
+            &__bars::before{
+                @include burgerBtn;
+            }
+
+            &__bars{
+                width: 100%;
+            }
+
+            &__bars::after{
+                width: 100%;
+                top: 12px;
+            }
+
+            &__bars::before{
+                width: 100%;
+                top: 24px;
+            }
+        }
+
+        &__list{
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            flex-direction: column;
+            transform: translateX(100%);
+            background-color: $dark;
+            transition: transform .5s;
+        }
+
+        &__list--active{
+            transform: translateX(0);
+        }
+
+        &__item{
+            position: relative;
+            margin: 0.5em 0;
+            padding: 0.5em 2em;
+            font-size: 2.5rem;
+            text-transform: uppercase;
+            text-decoration: none;
+            color: $white;
+
+        }
+    }
+
+    &-desktop{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        &__logo{
+            position: relative;
+            display: flex;
+            font-size: 2.5rem;
+            padding: 0.5em 0 0.4em 0;
+            margin: 0.5em;
+            font-family: 'Kalam', cursive;
+            color: $mainColor;
+            text-transform: uppercase;
+            font-weight: bold;
+
+            .fa-paper-plane{
+                margin: 0 0.5em;
+            }
+            
+            
+            &::after,
+            &::before{
+                @include logoLine;
+            }
+
+            &::before{
+                top: 0;
+            }
+
+            &::after{
+                bottom: 0;
+            }
+        }
+        
+
+        &__list{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        &__item{
+            position: relative;
+            margin: 0.5em 0;
+            padding: 0.2em 1em;
+            font-size: 2rem;
+            text-transform: uppercase;
+            text-decoration: none;
+            color: $white;
+
+            &::after{
+                position: absolute;
+                content: "";
+                height: 3px;
+                width: 100%;
+                background-color: $mainColor;
+                bottom: 0;
+                left: 0;
+                transition: transform .3s;
+                transform-origin: right;
+                transform: scaleX(0);
+            }
+
+            &:hover::after{
+                transform-origin: left;
+                transform: scaleX(1);
+            }
+
+            &:focus{
+                outline: none;
+            }
+
+            &:focus::after{
+                transform-origin: left;
+                transform: scaleX(1);
+            }
+        }
+    }
+}
+
+
+@import '_small';
+@import '_medium';
+@import '_large';

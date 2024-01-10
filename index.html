@@ -5,11 +5,50 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Podróż Smaków</title>
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kalam:wght@300&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Chivo&display=swap" rel="stylesheet">
+
+
     <script src="https://kit.fontawesome.com/156df4e152.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="scss/main.css">
 </head>
 <body>
-    
+    <nav class="nav">
+        <div class="nav-mobile">
+            <div class="wrapper">
+                <button class="burger-btn">
+                    <div class="burger-btn__box">
+                        <div class="burger-btn__bars"></div>
+                    </div>
+                </button>
+            </div>
+            <div class="nav-mobile__list">
+                <a href="#menu" class="nav-mobile__item">menu</a>
+                <a href="#location" class="nav-mobile__item">lokalizacja</a>
+                <a href="#contact" class="nav-mobile__item">kontakt</a>
+                <a href="#opinions" class="nav-mobile__item">opinie</a>
+                <a href="#gallery" class="nav-mobile__item">galeria</a>
+            </div>
+        </div>
+        <div class="nav-desktop wrapper">
+            <div class="nav-desktop__logo">
+                
+                <p class="nav-desktop__name">Podróż<i class="fa-solid fa-paper-plane"></i>smaków</p>
+            </div>
+            <div class="nav-desktop__list">
+                <a href="#menu" class="nav-desktop__item">menu</a>
+                <a href="#location" class="nav-desktop__item">lokalizacja</a>
+                <a href="#contact" class="nav-desktop__item">kontakt</a>
+                <a href="#opinions" class="nav-desktop__item">opinie</a>
+                <a href="#gallery" class="nav-desktop__item">galeria</a>
+            </div>
+        </div>
+    </nav>
+
+
+
     <script src="js/main.js"></script>
 </body>
 </html>
