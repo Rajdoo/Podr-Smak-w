@@ -1,7 +1,48 @@
 @media (min-width: 576px){
+
+    .cream-block{
+        width: 25%;
+    }
+
     .nav{
         &-desktop{
             display: none;
+        }
+    }
+
+    .header{
+        .wrapper{
+            grid-template-rows: 89px repeat(3, 1fr);
+        }
+
+        &__logo{
+            .logo{
+                font-size: 2.5rem;
+            }
+        }
+
+        &__imgs{
+            padding-top: 2em;
+
+            &-img__one{
+                grid-column: 2/5;
+                height: 300px;
+            }
+    
+            &-img__two{
+                grid-column: 4/7;
+                height: 300px;
+            }
+        }
+
+        &__menu{
+            &-text{
+                font-size: 2.5rem;
+            }
+    
+            &-btn{
+                font-size: 2.5rem;
+            }
         }
     }
 }

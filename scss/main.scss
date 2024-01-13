@@ -18,15 +18,24 @@ html{
 
 body{
     font-size: 1.6rem;
+    background-color: $cream;
 }
 
-// NAV
+.hr{
+    background-color: $mainColor;
+    height: 3px;
+    width: 100px;
+    margin-bottom: 15px;
+}
+
+// ---------------- NAV ---------------- 
 
 .nav{
     position: fixed;
     top: 0;
     width: 100%;
     font-family: 'Chivo', sans-serif;
+    z-index: 999;
 
     &-mobile{
         .burger-btn{
@@ -100,33 +109,8 @@ body{
         align-items: center;
 
         &__logo{
-            position: relative;
-            display: flex;
-            font-size: 2.5rem;
-            padding: 0.5em 0 0.4em 0;
+            @include logo;
             margin: 0.5em;
-            font-family: 'Kalam', cursive;
-            color: $mainColor;
-            text-transform: uppercase;
-            font-weight: bold;
-
-            .fa-paper-plane{
-                margin: 0 0.5em;
-            }
-            
-            
-            &::after,
-            &::before{
-                @include logoLine;
-            }
-
-            &::before{
-                top: 0;
-            }
-
-            &::after{
-                bottom: 0;
-            }
         }
         
 
@@ -174,6 +158,113 @@ body{
         }
     }
 }
+
+// ---------------- HEADER ---------------- 
+
+.header{
+    height: 95vh;
+    width: 100%;
+    background-color: $dark;
+    position: relative;
+    overflow: hidden;
+
+    .wrapper{
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: 70px repeat(3, 1fr);
+        height: 100%;
+    }
+
+    &__logo{
+        grid-column: 1/-2;
+        grid-row: 1/2;
+        display: flex;
+
+        .logo{
+            @include logo;
+            font-size: 2rem;
+            margin: 1.2em 0 0 1em;
+
+            .fa-paper-plane{
+                margin: 0 0.5em;
+                transform: translateY(10%);
+            }
+        }
+
+    }
+
+    &__imgs{
+        grid-column: 1/-1;
+        grid-row: 2/4;
+        display: grid;
+        grid-template-columns: repeat(7, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        padding-top: 1em;
+
+        &-img__one{
+            grid-column: 1/5;
+            grid-row: 1/3;
+            @include headerImg;
+        }
+
+        &-img__two{
+            grid-column: 4/8;
+            grid-row: 2/4;
+            @include headerImg;
+        }
+
+    }
+
+    &__menu{
+        grid-column: 1/-1;
+        grid-row: 4/5;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        font-family: 'Chivo', sans-serif;
+        
+        &-text{
+            font-size: 2rem;
+            margin-bottom: 0.5em;
+            text-transform: uppercase;
+            color: $white;
+
+            &:nth-child(2){
+                margin-bottom: 0.1em;
+            }
+        }
+
+        &-btn{
+            font-size: 2rem;
+            padding: 0.8em 2em;
+            text-transform: uppercase;
+            letter-spacing: 0.2em;
+            background: none;
+            border: 1px solid transparent;
+            background-color: $mainColor;
+            color: $cream;
+            cursor: pointer;
+            transition: background-color .3s, color .3s;
+
+            &:focus{
+                outline: none;
+                background-color: $cream;
+                color: $mainColor;
+            }
+
+            &:hover{
+                background-color: $cream;
+                color: $mainColor;
+            }
+        }
+
+    }
+}
+
+
+
+
 
 
 @import '_small';

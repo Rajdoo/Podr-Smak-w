@@ -5,3 +5,21 @@
     width: 100%;
     max-width: 1200px;
 }
+
+.cream-block{
+    position: absolute;
+    width: 20%;
+    height: 20px;
+    background-color: $cream;
+    bottom: 0;
+
+    &__left{
+        transform: skew(45deg);
+        left: -15px;
+    }
+
+    &__right{
+        transform: skew(-45deg);
+        right: -15px;
+    }
+}

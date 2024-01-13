@@ -1,3 +1,18 @@
 @media (min-width: 768px){
+    .cream-block{
+        height: 30px;
+    }
 
+    .header{
+        &__imgs{
+            &-img__one{
+                height: 350px;
+            }
+    
+            &-img__two{
+                height: 350px;
+            }
+        }
+
+    }
 }
