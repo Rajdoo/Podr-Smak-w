@@ -4,6 +4,10 @@
         width: 25%;
     }
 
+    .section-header{
+        font-size: 2.5rem;
+    }
+
     .nav{
         &-desktop{
             display: none;
@@ -42,6 +46,20 @@
     
             &-btn{
                 font-size: 2.5rem;
+            }
+        }
+    }
+
+    .location{
+        &__info{
+            width: 25em;
+        }
+
+        &__map{
+            width: 25em;
+
+            iframe{
+                width: 25em;
             }
         }
     }

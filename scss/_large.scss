@@ -1,6 +1,11 @@
 @media(min-width: 992px){
+
+    .section-header{
+        font-size: 2.8rem;
+    }
+
     .nav{
-        background-color: rgba($color: #676666, $alpha: .1);
+        background-color: #404040;
 
         &-mobile{
             display: none;
@@ -48,38 +53,55 @@
             }
         }
     }
+
+    .location{
+        .wrapper{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+        }
+    }
 }
 
 @media(min-width: 1200px){
+
     .header{
         &__logo{
             justify-content: end;
-            padding: 2em;
-
+            
             .logo{
                 font-size: 3.5rem;
             }
         }
 
-        &__imgs{
-            &-img__one{
-                grid-column: 1/5;
-                height: 350px;          
+    }
+
+    .location{
+        &__info{
+            width: 30em;
+            height: 30em;
+
+            &-text{
+                font-family: 'Rajdhani', sans-serif;
+                color: $dark;
+                font-size: 2rem;
+            }
+
+            i{
+                color: $mainColor;
+                font-size: 4.5rem;
             }
     
-            &-img__two{
-                grid-column: 4/8;
-                height: 350px;
-            }
         }
 
-        &__menu{
-            &-text{
-                font-size: 2.8rem;
-            }
-    
-            &-btn{
-                font-size: 2.8rem;
+        &__map{
+            width: 30em;
+            height: 30em;
+
+            iframe{
+                width: 30em;
+                height: 30em;
             }
         }
     }
