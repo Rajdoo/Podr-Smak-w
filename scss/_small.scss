@@ -53,10 +53,13 @@
     .location{
         &__info{
             width: 25em;
+            background-color: $white;
+            box-shadow: 5px 5px 5px $dark;
         }
 
         &__map{
             width: 25em;
+            box-shadow: 5px 5px 5px $dark;
 
             iframe{
                 width: 25em;

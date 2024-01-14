@@ -318,8 +318,6 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: #FFF;
-  box-shadow: 5px 5px 5px rgb(53, 53, 53);
   width: 19em;
   height: 25em;
 }
@@ -365,12 +363,11 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  box-shadow: 5px 5px 5px rgb(53, 53, 53);
-  width: 19em;
+  width: 100%;
   height: 25em;
 }
 .location__map iframe {
-  width: 19em;
+  width: 100%;
   height: 25em;
 }
 
@@ -409,9 +406,12 @@ body {
   }
   .location__info {
     width: 25em;
+    background-color: #FFF;
+    box-shadow: 5px 5px 5px rgb(53, 53, 53);
   }
   .location__map {
     width: 25em;
+    box-shadow: 5px 5px 5px rgb(53, 53, 53);
   }
   .location__map iframe {
     width: 25em;
