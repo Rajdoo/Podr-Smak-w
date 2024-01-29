@@ -4,6 +4,8 @@
     }
 
     .header{
+        height: 95vh;
+
         &__imgs{
             &-img__one{
                 height: 350px;
@@ -14,5 +16,20 @@
             }
         }
 
+    }
+
+    .contact{
+        &__box{
+            font-size: 2.8rem;
+
+            
+        i{
+            font-size: 3.2rem;
+        }
+
+        .fa-square-facebook{
+            font-size: 4.2rem;
+        }
+        }
     }
 }

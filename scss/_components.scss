@@ -11,17 +11,31 @@
     width: 20%;
     height: 20px;
     background-color: $cream;
-    bottom: 0;
+    z-index: 100;
 
     &__left{
+        bottom: 0;
         transform: skew(45deg);
         left: -15px;
     }
 
     &__right{
+        bottom: 0;
         transform: skew(-45deg);
         right: -15px;
     }
+
+    &__left-top{
+        top: 0;
+        transform: skew(-45deg);
+        left: -15px;
+    }
+
+    &__right-top{
+        top: 0;
+        transform: skew(45deg);
+        right: -15px;
+    }  
 }
 
 .section-padding{

@@ -5,7 +5,7 @@
     }
 
     .nav{
-        background-color: #404040;
+        //background-color: rgba($color: $dark, $alpha: 0.8);
 
         &-mobile{
             display: none;
@@ -62,6 +62,29 @@
             justify-content: center;
         }
     }
+
+    .contact{
+        &__boxes{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+        }
+
+        &__box{
+            font-size: 3.5rem;
+
+            
+            i{
+                font-size: 3.5rem;
+            }
+
+            .fa-square-facebook{
+                font-size: 5rem;
+            }
+        }
+    }
 }
 
 @media(min-width: 1200px){
@@ -102,6 +125,14 @@
             iframe{
                 width: 30em;
                 height: 30em;
+            }
+        }
+    }
+
+    .contact{
+        &__box{
+            .fa-square-facebook{
+                margin-left: 0.7em;
             }
         }
     }
