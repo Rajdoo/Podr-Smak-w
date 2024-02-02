@@ -438,14 +438,34 @@ body{
         align-items: center;
     }
 
+    &__text{
+        display: flex;
+        justify-content: end;
+        width: 100%;
+        font-family: 'Rajdhani', sans-serif;
+        color: $dark;
+        font-size: 2rem;
+
+        a{
+            color: $dark;
+            transition: color .3s;
+
+            &:hover{
+                color: $mainColor;
+            }
+        }
+    }
+
     &__boxes{
         padding: 5em;
+        display: flex;
     }
 
     &__box{
         
         position: relative;
         transition: transform .3s;
+        margin: 1em;
 
         &-img{
             position: absolute;
@@ -500,6 +520,22 @@ body{
 }
 
 
+// ---------------- FOOTER---------------- 
+
+.footer{
+    position: relative;
+    padding: 4em 0 2em 0;
+    overflow: hidden;
+    background-color: $dark;
+    color: $cream;
+    font-family: 'Chivo', sans-serif;
+
+    .wrapper{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+}
 
 
 
