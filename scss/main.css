@@ -335,6 +335,9 @@ body {
   color: rgb(103, 172, 91);
 }
 
+.location {
+  overflow: hidden;
+}
 .location .wrapper {
   display: flex;
   flex-direction: column;
@@ -456,6 +459,9 @@ body {
   font-weight: bold;
 }
 
+.opinions {
+  overflow: hidden;
+}
 .opinions .wrapper {
   display: flex;
   flex-direction: column;

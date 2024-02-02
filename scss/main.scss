@@ -283,6 +283,7 @@ body{
 // ================ LOCATION ================ 
 
 .location{
+    overflow: hidden;
 
     .wrapper{
         display: flex;
@@ -432,6 +433,7 @@ body{
 // ================ OPINIONS ================
 
 .opinions{
+    overflow: hidden;
     .wrapper{
         display: flex;
         flex-direction: column;
