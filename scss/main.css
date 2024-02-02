@@ -208,7 +208,7 @@ body {
   overflow: hidden;
   height: 92vh;
   width: 100%;
-  background-image: url(../img/food-2879265_1920.jpg);
+  background-image: url("../img/food-2879265_640.jpg");
   background-position: center;
   background-size: cover;
 }
@@ -456,6 +456,63 @@ body {
   font-weight: bold;
 }
 
+.opinions .wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.opinions__boxes {
+  padding: 5em;
+}
+.opinions__box {
+  position: relative;
+  transition: transform 0.3s;
+}
+.opinions__box-img {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  left: 50%;
+  transform: translateX(-50%);
+  top: -50px;
+}
+.opinions__box-container {
+  display: flex;
+  flex-direction: column;
+  width: 15em;
+  height: 15em;
+  padding: 1em;
+  padding-top: 3em;
+  box-shadow: 8px 8px 8px 5px rgb(53, 53, 53);
+  font-family: "Rajdhani", sans-serif;
+  color: rgb(53, 53, 53);
+}
+.opinions__box-container .fa-quote-left {
+  display: flex;
+  justify-content: end;
+  transform: rotate(180deg);
+  color: rgb(103, 172, 91);
+  font-size: 2.5rem;
+}
+.opinions__box-container-text {
+  font-size: 1.8rem;
+}
+.opinions__box-container-name {
+  padding: 0.5em 0;
+  font-size: 2rem;
+  font-weight: bold;
+}
+.opinions__box-container-stars {
+  display: flex;
+  justify-content: end;
+  color: rgb(222, 219, 33);
+}
+.opinions__box:hover {
+  transform: scale(0.95);
+}
+
 @media (min-width: 576px) {
   .cream-block {
     width: 25%;
@@ -508,6 +565,7 @@ body {
   }
   .header {
     height: 95vh;
+    background-image: url("../img/food-2879265_1920.jpg");
   }
   .header__imgs-img__one {
     height: 350px;
@@ -524,10 +582,33 @@ body {
   .contact__box .fa-square-facebook {
     font-size: 4.2rem;
   }
+  .opinions__box-img {
+    left: 30%;
+  }
+  .opinions__box-container {
+    width: 25em;
+    padding: 2em;
+    padding-top: 3.5em;
+  }
+  .opinions__box-container .fa-quote-left {
+    font-size: 3.5rem;
+  }
+  .opinions__box-container-text {
+    font-size: 2rem;
+  }
+  .opinions__box-container-name {
+    font-size: 2.2rem;
+  }
+  .opinions__box-container-stars {
+    font-size: 2rem;
+  }
 }
 @media (min-width: 992px) {
   .section-header {
     font-size: 2.8rem;
+  }
+  .nav {
+    background-color: rgba(53, 53, 53, 0.8);
   }
   .nav-mobile {
     display: none;
@@ -581,6 +662,26 @@ body {
   }
   .contact__box .fa-square-facebook {
     font-size: 5rem;
+  }
+  .opinions__box-img {
+    left: 30%;
+  }
+  .opinions__box-container {
+    width: 30em;
+    height: 17em;
+    padding-top: 3.5em;
+  }
+  .opinions__box-container .fa-quote-left {
+    font-size: 3.8rem;
+  }
+  .opinions__box-container-text {
+    font-size: 2.3rem;
+  }
+  .opinions__box-container-name {
+    font-size: 2.5rem;
+  }
+  .opinions__box-container-stars {
+    font-size: 2.3rem;
   }
 }
 @media (min-width: 1200px) {
